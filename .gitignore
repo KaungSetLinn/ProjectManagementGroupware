@@ -1,0 +1,44 @@
+# ----------------------------
+# Python / Django
+# ----------------------------
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Django collected static & media files
+/media/
+/staticfiles/
+
+# Local settings
+*.log
+
+# ----------------------------
+# Node / React
+# ----------------------------
+node_modules/
+dist/
+build/
+
+# React environment files
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# ----------------------------
+# Shared Environment files
+# ----------------------------
+.env
+
+# ----------------------------
+# OS / Editor junk
+# ----------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
