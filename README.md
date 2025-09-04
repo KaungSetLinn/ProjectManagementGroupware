@@ -3,8 +3,7 @@
 ## 1. リポジトリをクローン
 git clone https://github.com/KaungSetLinn/project-template.git
 
-## 2. バックエンドセットアップ
-cd backend
+## 2. 仮想環境の作成（プロジェクトルート）
 
 # 仮想環境を作成
 python -m venv venv
@@ -14,6 +13,10 @@ python -m venv venv
 source venv/bin/activate
 # Windows
 venv\Scripts\activate
+
+
+## 3. バックエンドセットアップ
+cd backend
 
 # 必要パッケージをインストール
 pip install -r requirements.txt
@@ -28,7 +31,7 @@ python manage.py migrate
 python manage.py runserver
 
 
-## 3. フロントエンドセットアップ
+## 4. フロントエンドセットアップ
 cd ../frontend
 
 # 依存パッケージをインストール
