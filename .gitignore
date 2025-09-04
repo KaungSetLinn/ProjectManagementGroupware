@@ -10,8 +10,7 @@ __pycache__/
 db.sqlite3
 
 # Django collected static & media files
-/media/
-/staticfiles/
+backend/media/
 
 # Local settings
 *.log
