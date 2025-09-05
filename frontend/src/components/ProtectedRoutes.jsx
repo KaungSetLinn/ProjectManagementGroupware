@@ -1,19 +1,19 @@
-import { Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useEffect } from "react";
 import { useAuth } from "../AuthContext";
 
-function ProtectedRoutes({children}) {
-    const { isAuthorized, setIsAuthorized, auth } = useAuth();
-    
-    useEffect(() => {
-        auth().catch(() => setIsAuthorized(false));
-    }, []);
+function ProtectedRoutes() {
+  const { isAuthorized, setIsAuthorized, auth } = useAuth();
 
-    if (isAuthorized == null) {
-        return <div>Loading...</div>
-    }
+  useEffect(() => {
+    auth().catch(() => setIsAuthorized(false));
+  }, []);
 
-    return isAuthorized ? children : <Navigate to="/login" />
+  if (isAuthorized == null) {
+    return <div>Loading...</div>;
+  }
+
+  return isAuthorized ? <Outlet /> : <Navigate to="/login" replace />;
 }
 
 export default ProtectedRoutes;

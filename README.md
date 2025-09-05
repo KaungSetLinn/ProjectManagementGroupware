@@ -1,9 +1,22 @@
 # セットアップ手順
 
 ## 1. リポジトリをクローン
-git clone https://github.com/KaungSetLinn/project-template.git
+git clone https://github.com/KaungSetLinn/ProjectManagementGroupware.git
+
+# プロジェクト構造
+C:
+|_ ProjectManagementGroupware
+    |_ backend
+    |_ frontend
+    |_ venv
+    |_ .gitignore
+    |_ README
+
 
 ## 2. 仮想環境の作成（プロジェクトルート）
+
+(新規コマンドプロンプトを開いて)
+cd C:\ProjectManagementGroupware
 
 # 仮想環境を作成
 python -m venv venv
@@ -22,7 +35,7 @@ cd backend
 pip install -r requirements.txt
 
 # 環境変数ファイルをコピーして編集
-cp .env.example .env
+copy .env.example .env
 
 # マイグレーションを実行
 python manage.py migrate
@@ -32,13 +45,17 @@ python manage.py runserver
 
 
 ## 4. フロントエンドセットアップ
-cd ../frontend
+
+(新規コマンドプロンプトを開いて)
+cd C:\ProjectManagementGroupware
+
+cd frontend
 
 # 依存パッケージをインストール
 npm install
 
 # 環境変数ファイルをコピーして編集
-cp .env.example .env
+copy .env.example .env
 
 # 開発サーバーを起動
 npm run dev
