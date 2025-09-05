@@ -4,13 +4,8 @@
 git clone https://github.com/KaungSetLinn/ProjectManagementGroupware.git
 
 # プロジェクト構造
-C:
-|_ ProjectManagementGroupware
-    |_ backend
-    |_ frontend
-    |_ venv
-    |_ .gitignore
-    |_ README
+
+![Project Structure](./frontend/public/images/project_structure.png)
 
 
 ## 2. 仮想環境の作成（プロジェクトルート）
